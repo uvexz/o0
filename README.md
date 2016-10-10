@@ -10,7 +10,7 @@ To start live preview, visit [YJK' Independent World](https://yjk.im).
 
 ![desktop](https://raw.githubusercontent.com/ygbhf/o0/master/assets/screenshot-desktop.jpg)
 
-![mobile](https://raw.githubusercontent.com/ygbhf/o0/master/assets/screenshot-mobile.jpg)
+![mobile](https://raw.githubusercontent.com/ygbhf/o0/master/assets/screenshot-mobile.png)
 
 ## Copyright & License
 
