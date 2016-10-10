@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Page Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    {{!-- Mobile Meta --}}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Brand icon --}}
+    <link rel="shortcut icon" href="{{asset "favicon/favicon.ico"}}">
+    <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+    <style>
+		* {margin:0;} .entry{padding: 0!important;}
+		body, p, li, ul, h1, h2, h3, h4, h5, a, code, blockquote, button, textarea, pre{font-family: "Noto Sans SC","Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Hiragino Kaku Gothic Pro",Meiryo,"Malgun Gothic",sans-serif;}
+		.container {position: relative;}
+		.header {width: 100%;text-align: right;}
+			.header h1 {font-size: 150px;padding: 300px 150px;}
+				.header h1 a {text-decoration: none; color:#000;}
+				.header h1 a:hover {color:red;}
+				.header h1 .dot {color:red;}
+		.main {max-width:700px;margin: 50px auto;}
+			.main .nav{list-style:none;padding:22px 0;font-size:15px;border-bottom: 1px solid #ececec;width:100%;}
+				.main .nav li{position: relative;display: initial;padding-right:20px;}
+				.main .nav a {text-decoration: none;color:#5A5A5A;padding-bottom: 22px;}
+				.main .nav a:hover{color:red;border-bottom: 1px solid red;}
+				.main .nav a.active {color:#000;border-bottom: 1px solid #000;}
+				.main .nav a.active:hover {color:red;border-bottom: 1px solid red;}
+			.main .content {margin: 20px 0;}
+				.main .content .content-head {padding: 20px 0;}
+				.main .content .content-head h2 {font-size: 20px;padding-bottom: 5px;text-transform: uppercase;}
+					.main .content .content-head h2 a {color:#000;text-decoration: none;}
+					.main .content .content-head h2 a:hover {color:red;}
+				.main .content .content-head p {color:#555;font-size: 12px;}
+					.main .content .content-head p a {color:#555;font-size: 12px;text-decoration: none;}
+					.main .content .content-head p a:hover {color:red;}
+				.main .content .entry code {padding: .2rem .3rem .1rem;border: 1px solid #d8e0e4;border-radius: 2px;color: red;vertical-align: middle;white-space: pre-wrap;font-size: .8em;line-height: 1em;}
+				.main .content .entry pre code {padding: 0;margin: 0;font-family: consolas,monaco,monospace;font-size: 14px;color: #424b50;background: none;border: none;}
+		.footer {position: fixed;bottom: 0;left:0;padding:3px 5px 5px 5px;width: 25px;height: 28px;overflow: hidden;background-color: #000;line-height:200%;}
+			.footer:hover {width: 100%;}
+			.footer p {color:#fff;font-size: 10px;}
+			.footer a {text-decoration: none;color:#fff;}
+			.footer a:hover {color:red;}
+		@media (max-width: 768px) {.header {text-align: center;}.header h1 {font-size: 50px;padding: 50px;}.main {padding-left: 20px;padding-right: 20px;}}
+	</style>
+
+    {{!-- Ghost outputs important style and meta data with this tag --}}
+    {{ghost_head}}
+</head><body>
+<div class="container">
+	<div class="header">
+		<h1><a href="#start">{{meta_title}}</a><span class="dot">.</span></h1>
+	</div>
+	<div class="main">
+
+    	{{!-- The blog navigation links --}}
+    	{{navigation}}
+
+
+        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+        {{{body}}}
+
+    </div>
+    <div class="footer">
+		<p><span style="padding-left:8px"><i class="fa fa-copyright"></i></span> {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a>  // Theme by <a href="https://yjk.im" target="_blank">YJK</a> // Published with <a href="https://github.com/TryGhost/Ghost" target="_blank">Ghost</a></p>
+	</div>
+
+    {{!-- Ghost outputs important scripts and data with this tag --}}
+    {{ghost_foot}}
+
+</div>
+</body></html>
