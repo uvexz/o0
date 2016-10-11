@@ -16,34 +16,34 @@
     {{!-- Brand icon --}}
     <link rel="shortcut icon" href="{{asset "favicon/favicon.ico"}}">
     <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-		* {margin:0;} .entry{padding: 0!important;}
-		body, p, li, ul, h1, h2, h3, h4, h5, a, code, blockquote, button, textarea, pre{font-family: "Noto Sans SC","Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Hiragino Kaku Gothic Pro",Meiryo,"Malgun Gothic",sans-serif;}
+		* {margin:0;}
+		body, p, li, ul, h1, h2, h3, h4, h5, a, .btn{font-family: "Noto Sans SC","Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Hiragino Kaku Gothic Pro",Meiryo,"Malgun Gothic",sans-serif;}
 		.container {position: relative;}
 		.header {width: 100%;text-align: right;}
-			.header h1 {font-size: 150px;padding: 300px 150px;}
+			.header h1 {font-size: 150px;font-weight: 800;padding: 270px 50px;text-align: center;}
 				.header h1 a {text-decoration: none; color:#000;}
 				.header h1 a:hover {color:red;}
 				.header h1 .dot {color:red;}
 		.main {max-width:700px;margin: 50px auto;}
 			.main .nav{list-style:none;padding:22px 0;font-size:15px;border-bottom: 1px solid #ececec;width:100%;}
 				.main .nav li{position: relative;display: initial;padding-right:20px;}
-				.main .nav a {text-decoration: none;color:#5A5A5A;padding-bottom: 22px;}
-				.main .nav a:hover{color:red;border-bottom: 1px solid red;}
+				.main .nav a {text-decoration: none;color:#5A5A5A;padding: 0 0 23px 0;display: initial;}
+				.main .nav a:hover{color:red;border-bottom: 1px solid red;background-color: #fff;}
 				.main .nav a.active {color:#000;border-bottom: 1px solid #000;}
 				.main .nav a.active:hover {color:red;border-bottom: 1px solid red;}
 			.main .content {margin: 20px 0;}
-				.main .content .content-head {padding: 20px 0;}
-				.main .content .content-head h2 {font-size: 20px;padding-bottom: 5px;text-transform: uppercase;}
+				.main .content .content-head {padding: 10px 0;}
+				.main .content .content-head h2 {font-size: 20px;padding-bottom: 5px;text-transform: uppercase;font-weight: 600;}
 					.main .content .content-head h2 a {color:#000;text-decoration: none;}
 					.main .content .content-head h2 a:hover {color:red;}
 				.main .content .content-head p {color:#555;font-size: 12px;}
-					.main .content .content-head p a {color:#555;font-size: 12px;text-decoration: none;}
-					.main .content .content-head p a:hover {color:red;}
-				.main .content .entry code {padding: .2rem .3rem .1rem;border: 1px solid #d8e0e4;border-radius: 2px;color: red;vertical-align: middle;white-space: pre-wrap;font-size: .8em;line-height: 1em;}
-				.main .content .entry pre code {padding: 0;margin: 0;font-family: consolas,monaco,monospace;font-size: 14px;color: #424b50;background: none;border: none;}
-		.footer {position: fixed;bottom: 0;left:0;padding:3px 5px 5px 5px;width: 25px;height: 28px;overflow: hidden;background-color: #000;line-height:200%;}
+				.main .content .content-head p a {color:#555;font-size: 12px;text-decoration: none;}
+				.main .content .content-head p a:hover {color:red;}
+				.main .content .article img {display: inline-block;max-width: 100%;height: auto;padding: 4px;line-height: 1.42857143;background-color: #fff;border: 1px solid #ddd;border-radius: 4px;-webkit-transition: all .2s ease-in-out;-o-transition: all .2s ease-in-out;transition: all .2s ease-in-out;}
+		.footer {position: fixed;bottom: 0;left:0;padding:2px 3px 3px 0px;width: 25px;height: 30px;overflow: hidden;background-color: #000;line-height:200%;}
 			.footer:hover {width: 100%;}
 			.footer p {color:#fff;font-size: 10px;}
 			.footer a {text-decoration: none;color:#fff;}
@@ -69,7 +69,7 @@
 
     </div>
     <div class="footer">
-		<p><span style="padding-left:8px"><i class="fa fa-copyright"></i></span> {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a>  // Theme by <a href="https://yjk.im" target="_blank">YJK</a> // Published with <a href="https://github.com/TryGhost/Ghost" target="_blank">Ghost</a></p>
+		<p><span style="padding-left:7px"><i class="fa fa-copyright"></i></span> {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a>  // Theme by <a href="https://yjk.im" target="_blank">YJK</a> // Published with <a href="https://github.com/TryGhost/Ghost" target="_blank">Ghost</a></p>
 	</div>
 
     {{!-- Ghost outputs important scripts and data with this tag --}}

@@ -1,17 +1,16 @@
 {{!< default}}
 
-{{!-- The comment above "< default" means - insert everything in this file into
-    the {{{body}}} of the default.hbs template, containing the blog header/footer. --}}
+{{!-- This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. --}}
 
-{{!-- Everything inside the #post tags pulls data from the post --}}
+{{!-- Everything inside the #post tags pulls data from the page --}}
 {{#post}}
-        <link rel="stylesheet" type="text/css" href="{{asset "css/entry.css"}}" />
         <div class="content">
             <div class="content-head">
                 <h2>{{title}}</h2>
                 <p><i class="fa fa-calendar"></i>&nbsp; {{date format="YYYY-MM-DD"}}  &nbsp;<i class="fa fa-commenting-o"></i>&nbsp; <a href="#comments"><span class="ds-thread-count" data-thread-key="{{slug}}" data-count-type="comments"></span></a></p>
             </div>
-            <div class="entry">
+            <div class="article">
                 {{content}}
 
                 <div class="content-head">

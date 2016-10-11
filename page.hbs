@@ -5,13 +5,12 @@
 
 {{!-- Everything inside the #post tags pulls data from the page --}}
 {{#post}}
-        <link rel="stylesheet" type="text/css" href="{{asset "css/entry.css"}}" />
         <div class="content">
             <div class="content-head">
                 <h2>{{title}}</h2>
                 <p><i class="fa fa-calendar"></i>&nbsp; {{date format="YYYY-MM-DD"}}  &nbsp;<i class="fa fa-commenting-o"></i>&nbsp; <a href="#comments"><span class="ds-thread-count" data-thread-key="{{slug}}" data-count-type="comments"></span></a></p>
             </div>
-            <div class="entry">
+            <div class="article">
                 {{content}}
 
                 <div class="content-head">
