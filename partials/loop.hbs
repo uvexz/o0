@@ -1,0 +1,8 @@
+{{!-- This is the post loop - each post will be output using this markup --}}
+{{#foreach posts}}
+<div class="content-head">
+    <h2><a href="{{url}}#start">{{title}}</a></h2>
+    <p><i class="fa fa-calendar"></i>&nbsp; {{date format="YYYY-MM-DD"}}</p>
+</div>
+{{/foreach}}
+
